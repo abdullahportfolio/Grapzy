@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grapzy | Technology & Design Solutions</title>
+    <meta name="description"
+        content="Grapzy offers premium technology, development, and design services. We build modern websites, branding, and digital solutions.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container flex justify-between items-center">
+            <div class="logo">
+                <a href="#">Grapzy<span style="color:var(--secondary-color)">.</span></a>
+            </div>
+
+
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <div class="nav-overlay" id="nav-overlay"></div>
+
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list flex gap-4">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Work</a></li> <!-- Changed from Portfolio for variation -->
+                    <li><a href="#blog">Blog</a></li>
+                    <li class="mobile-only-cta"><a href="#contact" class="btn btn-primary">Start Project</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="#contact" class="btn btn-primary">Start Project</a>
+            </div>
+
+            <div class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                <!-- Sun/Moon Icon managed by JS -->
+                <svg class="theme-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container">
+                <div class="hero-wrapper flex items-center justify-between gap-4">
+                    <div class="hero-text fade-in-up" style="flex: 1; max-width: 600px;">
+                        <h1 style="text-align: left;">Bring Force of <br><span class="text-gradient">Artificial
+                                Intelligence</span> <br> To Business</h1>
+                        <p style="text-align: left; margin-left: 0;">We transform ideas into powerful digital
+                            experiences. Expert development, stunning design, and strategic branding for the modern era.
+                        </p>
+                        <div class="hero-btns" style="justify-content: flex-start;">
+                            <a href="#about" class="btn btn-primary">Read More &rarr;</a>
+                            <a href="#contact" class="btn btn-outline">Contact Us &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="hero-image fade-in-up"
+                        style="flex: 1; display: flex; justify-content: flex-end; position: relative;">
+                        <!-- User Uploaded Robot Image -->
+                        <img src="hero-robot.png" alt="Futuristic AI Robot with Tablet" class="hero-robot-anim"
+                            style="max-height: 600px; width: auto; position: relative; z-index: 2;">
+
+                        <!-- Animated Floating Icons -->
+                        <!-- React/Atom Icon -->
+                        <div class="tech-icon icon-1" style="top: 20%; left: 10%;">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#6366f1"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M12 2C7.5 2 4 6.5 4 12s3.5 10 8 10 8-4.5 8-10-3.5-10-8-10z"></path>
+                                <path d="M2.5 9c1.5-3 5.5-4 9-2s5 3.5 3.5 6.5-5.5 4-9 2-5-3.5-3.5-6.5z"
+                                    transform="rotate(60 12 12)">
+                                </path>
+                                <path d="M2.5 15c-1.5-3 1-7.5 4.5-8.5s6.5 2.5 5 5.5-1 7.5-4.5 8.5-6.5-2.5-5-5.5z"
+                                    transform="rotate(120 12 12)"></path>
+                            </svg>
+                        </div>
+
+                        <!-- AI/Brain Icon -->
+                        <div class="tech-icon icon-2" style="top: 15%; right: 5%;">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ec4899"
+                                stroke-width="1.5">
+                                <path
+                                    d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z">
+                                </path>
+                                <path
+                                    d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <!-- Code/Terminal Icon -->
+                        <div class="tech-icon icon-3" style="bottom: 25%; left: 0%;">
+                            <svg width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="#06b6d4"
+                                stroke-width="1.5">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+
+                        <!-- Database/Data Icon -->
+                        <div class="tech-icon icon-4" style="bottom: 30%; right: 0%;">
+                            <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6"
+                                stroke-width="1.5">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-visual fade-in-up">
+                        <img src="about-illustration.png" alt="Technology and Development Illustration"
+                            class="about-image-anim" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="about-content">
+                        <h2>Innovating for the <span class="text-gradient">Digital Future</span></h2>
+                        <p>At Grapzy, we don't just build websites; we craft digital experiences that drive growth. We
+                            are a team of passionate developers and designers dedicated to transforming your vision into
+                            reality.</p>
+
+                        <ul class="feature-list">
+                            <li><span>&#10003;</span> Expert Team of Developers</li>
+                            <li><span>&#10003;</span> Modern Tech Stack & Architecture</li>
+                            <li><span>&#10003;</span> User-Centric Design Philosophy</li>
+                            <li><span>&#10003;</span> 24/7 Support & Maintenance</li>
+                        </ul>
+
+                        <div class="about-more-details" id="about-details" style="display: none;">
+                            <div class="detail-item">
+                                <h3>Who We Are</h3>
+                                <p>We are a forward-thinking digital agency committed to excellence. Our passion lies in
+                                    briding the gap between complex technology and user-friendly experiences.</p>
+                            </div>
+                            <div class="detail-item">
+                                <h3>Our Mission</h3>
+                                <p>To empower businesses with innovative digital solutions that drive growth,
+                                    efficiency, and sustainability in an ever-evolving market.</p>
+                            </div>
+                            <div class="detail-item">
+                                <h3>Our Vision</h3>
+                                <p>To be the global catalyst for digital transformation, setting new standards for
+                                    creativity and technical performance.</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <button id="about-learn-more" class="btn btn-outline">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Our <span class="text-gradient">Core Services</span></h2>
+                    <p>Comprehensive solutions tailored to your business needs.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <!-- Code Icon (SVG placeholder or font icon) -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>High-performance websites built with the latest technologies. From landing pages to complex
+                            web apps.</p>
+                        <a href="services/web-development.html" class="service-link">View Details &rarr;</a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <!-- Design Icon -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                <path d="M2 2l7.586 7.586"></path>
+                                <circle cx="11" cy="11" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>User-friendly interfaces that look stunning and convert visitors into loyal customers.</p>
+                        <a href="services/ui-ux-design.html" class="service-link">View Details &rarr;</a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <!-- Branding/Marketing Icon -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20h9"></path>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                            </svg>
+                        </div>
+                        <h3>Branding & Identity</h3>
+                        <p>Create a memorable brand presence with our strategic branding and graphic design services.
+                        </p>
+                        <a href="services/branding.html" class="service-link">View Details &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-us section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Why Choose <span class="text-gradient">Grapzy?</span></h2>
+                    <p>We deliver excellence in every pixel and line of code.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon-lg">&#9733;</span>
+                        <h3>5+ Years Experience</h3>
+                        <p>Proven track record of delivering successful projects for global clients.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon-lg">&#9881;</span>
+                        <h3>Quality Assurance</h3>
+                        <p>Rigorous testing and attention to detail ensure flawless performance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon-lg">&#128172;</span>
+                        <h3>24/7 Support</h3>
+                        <p>Always here to help you with maintenance and updates.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon-lg">&#128178;</span>
+                        <h3>Affordable Pricing</h3>
+                        <p>Premium quality services at competitive market rates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="projects" class="portfolio section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Our <span class="text-gradient">Recent Projects</span></h2>
+                    <p>Explore some of our latest success stories.</p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-bg bg-1"></div>
+                        <div class="portfolio-overlay">
+                            <h3>FinTech Dashboard</h3>
+                            <p>Web App Development • UI/UX</p>
+                            <a href="#" class="portfolio-link">View Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-bg bg-2"></div>
+                        <div class="portfolio-overlay">
+                            <h3>E-Commerce Platform</h3>
+                            <p>Full Stack Development</p>
+                            <a href="#" class="portfolio-link">View Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-bg bg-3"></div>
+                        <div class="portfolio-overlay">
+                            <h3>HealthTech App</h3>
+                            <p>Mobile App Design</p>
+                            <a href="#" class="portfolio-link">View Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-bg bg-4"></div>
+                        <div class="portfolio-overlay">
+                            <h3>Corporate Branding</h3>
+                            <p>Identity • Logo Design</p>
+                            <a href="#" class="portfolio-link">View Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-bg bg-5"></div>
+                        <div class="portfolio-overlay">
+                            <h3>Real Estate Portal</h3>
+                            <p>Web Design & Development</p>
+                            <a href="#" class="portfolio-link">View Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-bg bg-6"></div>
+                        <div class="portfolio-overlay">
+                            <h3>SaaS Landing Page</h3>
+                            <p>Conversion Optimization</p>
+                            <a href="#" class="portfolio-link">View Case Study &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="projects.html" class="btn btn-outline">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team Section -->
+        <section class="team section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Meet The <span class="text-gradient">Team</span></h2>
+                    <p>The minds behind the magic.</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-member">
+                        <!-- Placeholder image (using a gradient div if no img) but let's use a generic avatar URL if possible, or just a colored circle -->
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff" alt="John Doe"
+                            loading="lazy">
+                        <h3>John Doe</h3>
+                        <p>CEO & Founder</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=ec4899&color=fff"
+                            alt="Jane Smith">
+                        <h3>Jane Smith</h3>
+                        <p>Lead Designer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://ui-avatars.com/api/?name=Mike+Ross&background=06b6d4&color=fff"
+                            alt="Mike Ross">
+                        <h3>Mike Ross</h3>
+                        <p>Senior Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Lee&background=8b5cf6&color=fff"
+                            alt="Sarah Lee">
+                        <h3>Sarah Lee</h3>
+                        <p>Marketing Head</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Client <span class="text-gradient">Feedback</span></h2>
+                    <p>What our partners say about us.</p>
+                </div>
+
+                <div class="test-grid">
+                    <div class="test-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="test-text">"Grapzy transformed our online presence. Their design team is top-notch and
+                            the development was seamless."</p>
+                        <div class="client-info">
+                            <h4>Robert Fox</h4>
+                            <span>CTO, TechCorp</span>
+                        </div>
+                    </div>
+                    <div class="test-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="test-text">"Professional, timely, and incredibly talented. Best agency we've worked
+                            with in years."</p>
+                        <div class="client-info">
+                            <h4>Jenny Wilson</h4>
+                            <span>Marketing Director, FashionNova</span>
+                        </div>
+                    </div>
+                    <div class="test-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="test-text">"The ROI on our new website has been incredible. Highly recommend Grapzy
+                            for any digital needs."</p>
+                        <div class="client-info">
+                            <h4>Guy Hawkins</h4>
+                            <span>Founder, StartUpX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How long does a website project take?</span>
+                            <span class="toggle-icon">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Typically, a standard company website takes 2-4 weeks. Complex web applications may take
+                                8-12 weeks depending on features.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you provide hosting and domain?</span>
+                            <span class="toggle-icon">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We can help you set up hosting and domain registration, or work with your existing
+                                providers.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            <span>Will my site be mobile-friendly?</span>
+                            <span class="toggle-icon">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely. We prioritize mobile-first design, ensuring your site looks perfect on
+                                phones, tablets, and desktops.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span> What is your pricing model?</span>
+                            <span class="toggle-icon">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer project-based pricing tailored to your specific requirements. Contact us for a
+                                free quote!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Latest <span class="text-gradient">Insights</span></h2>
+                    <p>Trends, tips, and tech news.</p>
+                </div>
+
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-img"></div>
+                        <div class="blog-content">
+                            <span class="blog-date">Jan 10, 2026</span>
+                            <h3 class="blog-title">The Future of Web Design in 2026</h3>
+                            <a href="#" class="blog-link">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-img"></div>
+                        <div class="blog-content">
+                            <span class="blog-date">Jan 05, 2026</span>
+                            <h3 class="blog-title">Why Speed Matters for SEO</h3>
+                            <a href="#" class="blog-link">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-img"></div>
+                        <div class="blog-content">
+                            <span class="blog-date">Dec 28, 2025</span>
+                            <h3 class="blog-title">Maximizing Conversion Rates</h3>
+                            <a href="#" class="blog-link">Read Article &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section section">
+            <div class="container">
+                <h2 class="fade-in-up">Ready to Start Your Project?</h2>
+                <p>Let's build something amazing together. Contact us today for a free consultation.</p>
+                <a href="#contact" class="btn btn-white">Get a Quote</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Get In <span class="text-gradient">Touch</span></h2>
+                    <p>We'd love to hear from you.</p>
+                </div>
+
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Us</h4>
+                                <p>hello@grapzy.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.81 12.81 0 0 0 .62 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.62A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Visit Us</h4>
+                                <p>123 Tech Street, Silicon Valley, CA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control"
+                                    placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Grapzy<span style="color:var(--secondary-color)">.</span></h3>
+                    <p>We are a digital agency focused on delivering high-quality web solutions and design services to
+                        help businesses grow.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="X">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768M20 4l-6.768 6.768"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#projects">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">SEO Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#contact">Contact Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Grapzy International. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Design & Developed By <a
+                        href="https://abdullahshaimy.netlify.app" target="_blank"
+                        style="color:var(--secondary-color); text-decoration: none;">Abdullah</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
