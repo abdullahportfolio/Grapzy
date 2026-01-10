@@ -504,12 +504,18 @@ body.light-mode .nav-list li a.active {
 
 /* Removed .hero-content max-width constraint for full width flex */
 
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
 .hero h1 {
     font-size: clamp(2.5rem, 4vw, 4rem);
     font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.2;
     letter-spacing: -0.5px;
+    text-align: left;
 }
 
 .hero p {
@@ -518,11 +524,13 @@ body.light-mode .nav-list li a.active {
     margin-bottom: 2.5rem;
     max-width: 550px;
     line-height: 1.7;
+    text-align: left;
 }
 
 .hero-btns {
     display: flex;
     gap: 1.5rem;
+    justify-content: flex-start;
 }
 
 /* Responsive adjustment for Hero */
@@ -701,6 +709,43 @@ body.light-mode .nav-list li a.active {
 /* Hide mobile CTA on desktop */
 .mobile-only-cta {
     display: none;
+}
+
+/* Mobile Responsive Optimization for Buttons and Cards */
+@media (max-width: 600px) {
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero h1,
+    .hero p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item {
+        aspect-ratio: 1/1;
+    }
+
+    .portfolio-overlay {
+        opacity: 1;
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.4));
+    }
 }
 
 /* Theme Toggle Button */
@@ -1587,10 +1632,27 @@ body.light-mode .social-link:hover {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
 }
 
 @media (max-width: 600px) {
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 95%;
+        padding: 0 1rem;
     }
 }
