@@ -735,13 +735,13 @@ body.light-mode .nav-list li a.active {
 
     /* Smaller theme toggle on mobile */
     .theme-toggle {
-        width: 36px;
-        height: 36px;
+        width: 28px;
+        height: 28px;
     }
 
     .theme-icon {
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
     }
 }
 
@@ -787,16 +787,13 @@ body.light-mode .nav-list li a.active {
     }
 }
 
-/* Theme Toggle Button */
+/* Theme Toggle Button - Icon Only */
 .theme-toggle {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
     margin-left: 1rem;
     margin-right: 0;
     color: var(--white);
@@ -804,26 +801,20 @@ body.light-mode .nav-list li a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
 }
 
 .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: rotate(15deg) scale(1.05);
-    border-color: var(--primary-color);
-    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+    transform: rotate(15deg) scale(1.15);
+    color: var(--secondary-color);
 }
 
 body.light-mode .theme-toggle {
-    background: rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.1);
     color: var(--text-main);
 }
 
 body.light-mode .theme-toggle:hover {
-    background: rgba(0, 0, 0, 0.1);
     color: var(--primary-color);
-    border-color: var(--primary-color);
 }
 
 .theme-icon {
@@ -1694,4 +1685,107 @@ body.light-mode .social-link:hover {
         width: 95%;
         padding: 0 1rem;
     }
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: -60px;
+    /* Hidden initially */
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: rgba(99, 102, 241, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-top.visible {
+    bottom: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+}
+
+.scroll-top svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+body.light-mode .scroll-top {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.05);
+    color: var(--text-main);
+}
+
+body.light-mode .scroll-top:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .scroll-top {
+        right: 20px;
+        bottom: -50px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .scroll-top.visible {
+        bottom: 20px;
+    }
+}
+
+/* UI/UX Design Image Animation */
+.ui-ux-image-anim {
+    animation: floatAnimation 6s ease-in-out infinite;
+    filter: drop-shadow(0 20px 40px rgba(99, 102, 241, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.ui-ux-image-anim:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 25px 50px rgba(99, 102, 241, 0.4));
+}
+
+@keyframes floatAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+body.light-mode .ui-ux-image-anim {
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+}
+
+body.light-mode .ui-ux-image-anim:hover {
+    filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.2));
 }
