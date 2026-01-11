@@ -1,6 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Grapzy Website Loaded');
 
+    // Preloader Logic
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        const fadeOutPreloader = () => {
+            setTimeout(() => {
+                preloader.classList.add('fade-out');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1500); // 1.5s branding display
+        };
+
+        if (document.readyState === 'complete') {
+            fadeOutPreloader();
+        } else {
+            window.addEventListener('load', fadeOutPreloader);
+            // Fallback
+            setTimeout(fadeOutPreloader, 5000);
+        }
+    }
+
     // Smooth Scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
