@@ -259,6 +259,34 @@ h6 {
     box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #128C7E, #075E54);
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+.btn-whatsapp:hover::before {
+    opacity: 1;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -602,7 +630,7 @@ body.light-mode .nav-list li a.active {
 
     .nav-list {
         flex-direction: column;
-        gap: 2.5rem;
+        gap: 1.5rem;
         width: 100%;
         display: flex;
         padding-top: 2rem;
@@ -703,6 +731,17 @@ body.light-mode .nav-list li a.active {
 
     body.menu-open {
         overflow: hidden;
+    }
+
+    /* Smaller theme toggle on mobile */
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .theme-icon {
+        width: 16px;
+        height: 16px;
     }
 }
 
